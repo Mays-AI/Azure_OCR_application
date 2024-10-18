@@ -1,0 +1,36 @@
+### Passport Data Extraction App:
+
+
+#### Overview
+The Passport Data Extraction App is a Flask-based web application that automates the extraction of passport information using Azure Form Recognizer (prebuilt ID model). It allows users to upload passport images or PDFs, from which it extracts essential details like name, passport number, and nationality. The extracted data is saved in both JSON format and an SQLite database.
+
+#### Key Features
+- File Upload: supports PDF, PNG, JPG, and JPEG.
+- Azure Form Recognizer: AI-driven passport data extraction.????????
+- Database Storage: data is saved in SQLite.
+- JSON Export: metadata saved as a JSON file.
+- Duplicate Check: prevents duplicate passport entries.
+
+#### How It Works
+1. User uploads and submits a passport file.
+2. Azure extracts key data fields.
+3. Data is saved in the database and as a JSON file in the upload folder.
+4. Extracted metadata is displayed on the webpage.
+
+#### Technologies
+- Flask: web framework for building the web application.
+- Azure Form Recognizer: uses the prebuilt ID model for automatic data extraction from passport documents.
+- SQLite: database for storing passport metadata.
+- HTML/CSS: Basic front-end for user interface.
+
+#### Functions:
+upload_file() is the core function that coordinates everything:
+It calls allowed_file() to check file type.
+Calls analyze_passport() to extract data from the file.
+Calls convert_dates_to_strings() to format date fields.
+Calls save_metadata_as_json() to save metadata as JSON.
+Calls insert_metadata_into_db() to store the data in the database.
+
+#### Additional Information:
+- First step: Create the Database Table: python db_setup.py
+- Then: Run the Application: python app.py

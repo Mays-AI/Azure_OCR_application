@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upload your passport for Optical Character Recognition (OCR) analysis.">
+    <meta name="keywords" content="passport, OCR, upload, analysis">
+    <title>Upload Passport for OCR</title>
+   
+    <link rel="icon" href="{{ url_for('static', filename='favicon-32x32.png') }}" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <!-- Link to external CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Passport Copy</h1>
+        <div class="note" role="alert">
+            Please ensure that the document is clear and legible. Accepted formats: PDF, JPG, PNG, JPEG.
+        </div>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="passport">Select Passport File:</label>
+            <input type="file" name="passport" id="passport" accept=".pdf,.jpg,.png,.jpeg" required aria-required="true">
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Display the extracted metadata if available -->
+        {% if metadata %}
+        <div class="result">
+            <h2>Extracted Passport Data</h2>
+            <ul>
+                <li><strong>First Name:</strong> {{ metadata.FirstName }}</li>
+                <li><strong>Last Name:</strong> {{ metadata.LastName }}</li>
+                <li><strong>Passport Number:</strong> {{ metadata.PassportNumber }}</li>
+                <li><strong>Nationality:</strong> {{ metadata.Nationality }}</li>
+                <li><strong>Date of Birth:</strong> {{ metadata.DateOfBirth }}</li>
+                <li><strong>Date of Issue:</strong> {{ metadata.DateOfIssue }}</li>
+                <li><strong>Date of Expiration:</strong> {{ metadata.DateOfExpiration }}</li>
+                <li><strong>Sex:</strong> {{ metadata.Sex }}</li>
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

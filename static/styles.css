@@ -1,0 +1,105 @@
+/* Container styling */
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff; /* White background */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern look */
+}
+
+.container h1 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333333; /* Dark gray text for good contrast */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the alert note */
+.note {
+    background-color: #e3f2fd; /* Light blue alert background */
+    color: #0d47a1; /* Darker blue text for contrast */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+
+/* Styling for the form */
+form {
+    background-color: #f8f9fa; /* Very light gray for form background */
+    border: 2px solid #e0e0e0; /* Light gray border */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for the form */
+}
+
+/* Form input and button styling */
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #0d47a1; /* Light blue button */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1565c0; /* Darker blue on hover */
+}
+
+/* Styling for the results section */
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f0f4f8; /* Light blue-gray background for result box */
+    border-radius: 10px;
+    border: 1px solid #e0e0e0; /* Light gray border */
+}
+
+.result h2 {
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    color: #333333;
+    font-size: 22px;
+}
+
+/* Removing bullet points and aligning text to the left */
+.result ul {
+    list-style-type: none; /* Removes bullets */
+    padding: 0;
+}
+
+.result li {
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    color: #444444; /* Dark gray for result text */
+    margin: 8px 0; /* Spacing between result items */
+    font-size: 16px;
+}
+
+/* Adjust input and result section */
+input[type="file"] {
+    border: 1px solid #b0bec5; /* Light blue-gray border */
+}
+
+button:hover {
+    background-color: #1976d2; /* Slightly darker blue */
+}
